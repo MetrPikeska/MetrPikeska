@@ -1,52 +1,48 @@
-# Hi, I'm Petr 👋
+# Petr Mikeska
 
-**Geoinformatics MSc student** at Palacký University Olomouc, focused on GIS, Computer Vision, and GeoAI.
+**Computer Vision & Geospatial Engineer** · Mobile mapping, LiDAR, GeoAI  
+MSc Geoinformatics student, Palacký University Olomouc · currently on Erasmus+ at AUTH, Thessaloniki
 
-I build tools that connect spatial data with machine learning — from detecting vehicles in orthophotos to evaluating AI-generated maps. I'm also into embedded systems and IoT on the side.
+I build computer vision and geospatial tools for mobile mapping. At [CEDA Maps](https://www.ceda.cz/) I work on a GeoAI pipeline that turns street-level survey data (360° imagery, GNSS, LiDAR) into a map-ready inventory of traffic signs and road defects. My part connects the two sides: YOLO detections, monocular depth and structure-from-motion on one, georeferencing and LiDAR validation on the other.
 
----
+Besides that I co-founded [VečerkaPlus](https://vecerkaplus.cz/), a late-night delivery service in Frýdek-Místek, where I wrote the whole platform and run day-to-day operations.
 
-## What I work with
+🌐 [petrmikeska.cz](https://petrmikeska.cz/) · 💼 [LinkedIn](https://www.linkedin.com/in/mikeskapetr) · ✉️ piter.mikeska@gmail.com
 
-**Spatial & Data**
-Python · PostGIS · QGIS · GeoPandas · Leaflet · GDAL
+## Selected work
 
-**Computer Vision & AI**
-OpenCV · YOLO · PyTorch · LLM evaluation · GeoAI
+**[Vehicle detection from orthophotos](https://github.com/MetrPikeska/medpz-geoai)**
+YOLOv8s-OBB with SAHI tiling over four 10 cm/px orthophotos of Olomouc (EPSG:5514), combined with RÚIAN address points, Voronoi zones and DBSCAN to get vehicles per resident and to find parking lots.
 
-**Web**
-JavaScript · TypeScript · React
+**[Park Accessibility Toolbox](https://github.com/MetrPikeska/park-accessibility-toolbox)**
+Bachelor's thesis: QGIS and Python toolbox measuring pedestrian access to urban green space through network analysis. [Thesis page](https://geoinformatics.upol.cz/dprace/bakalarske/mikeska25)
 
-**Embedded / IoT**
-ESP32 · Arduino · C++
+**[GeoteKlima UI](https://github.com/MetrPikeska/geote-klima-ui)**
+Web interface over a PostGIS climate database: spatial queries and visualization of climate indices for the Czech Republic.
 
----
+**[Roundabout exit detection](https://github.com/MetrPikeska/roundabout-exit-detection)**
+YOLOv8 tracking with Shapely ROI polygons and a state machine that counts which exit each vehicle takes, aggregated per minute to CSV.
 
-## Featured Projects
+**[VečerkaPlus Analytics](https://github.com/MetrPikeska/vecerkaplus-analytics)**
+Streamlit app on my own Ubuntu server reading the production Supabase database: sales, margins, order timing and basket analysis that drive purchasing and pricing.
 
-### 🗺️ [AI-Generated Map Evaluation](https://github.com/MetrPikeska/ai-generated-map-evaluation)
-*Master's thesis* — Benchmarking LLMs (ChatGPT, Claude, Gemini, Mistral, Copilot) against traditional GIS workflows for cartographic output. Evaluates choropleth maps, web maps, and spatial reasoning.
+**[Ski Cam Analytics](https://github.com/MetrPikeska/ski-cam-analytics)** · **[Cemetery Passport](https://github.com/MetrPikeska/cemetery-passport)** · **[DEM Terrain Analyzer](https://github.com/MetrPikeska/dem-terrain-analyzer)**
+People counting from an HLS stream (YOLO ONNX on CPU), a PostGIS and Leaflet editor for cemetery records, and A* least-slope routing over a DEM.
 
-### 🌿 [Park Accessibility Toolbox](https://github.com/MetrPikeska/park-accessibility-toolbox)
-*Bachelor's thesis* — QGIS/Python toolbox for measuring pedestrian access to urban green spaces using network analysis.
+## Stack
 
-### 🌡️ [GeoteKlima UI](https://github.com/MetrPikeska/geote-klima-ui)
-Web interface for a PostGIS climate database, enabling spatial analysis and visualization of climate indices across the Czech Republic.
+| | |
+|---|---|
+| **Spatial** | PostGIS · QGIS · ArcGIS Pro · GDAL/OGR · GeoPandas · Leaflet · MapLibre |
+| **Vision & ML** | PyTorch · YOLOv8/OBB · SAHI · OpenCV · monocular depth · COLMAP |
+| **LiDAR & 3D** | PDAL · Open3D · CloudCompare · Blender |
+| **Code & data** | Python · TypeScript · SQL · FastAPI · PostgreSQL · Supabase · Streamlit |
+| **Infra** | Git · Docker · CUDA · Vercel · self-hosted Ubuntu |
+| **Hardware** | ESP32 · Arduino · C++ · sensors and home lab networking |
 
-### 🅿️ Parking & Vehicle Detection
-Computer vision pipelines for real-time parking occupancy detection and vehicle detection from aerial orthophotos — [`parking-car-detection`](https://github.com/MetrPikeska/parking-car-detection) · [`vehicle-detection-ortophoto`](https://github.com/MetrPikeska/vehicle-detection-ortophoto)
+## Now
 
-### ⛷️ [Ski Cam Analytics](https://github.com/MetrPikeska/ski-cam-analytics)
-Crowd and queue analysis on ski resort camera feeds using computer vision.
-
----
-
-## Currently
-
-- Writing my master's thesis on AI-generated cartography
-- Building spatial analysis tools in Python & PostGIS
-- Exploring GeoAI applications
-
----
-
-📍 Olomouc, Czech Republic &nbsp;·&nbsp; 🌐 [petrmikeska.cz](https://petrmikeska.cz/) &nbsp;·&nbsp; 📬 piter.mikeska@gmail.com
+- Traffic sign geolocation and LiDAR-based accuracy checks at CEDA Maps
+- Master's thesis on AI-generated cartography: benchmarking LLM map output against GIS workflows
+- Erasmus+ semester at Aristotle University of Thessaloniki, Rural & Surveying Engineering
+- Open to computer vision and geospatial engineering roles across Europe
