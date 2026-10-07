@@ -1,48 +1,28 @@
-# Petr Mikeska
+# petr mikeska
 
-**Computer Vision & Geospatial Engineer** · Mobile mapping, LiDAR, GeoAI  
-MSc Geoinformatics student, Palacký University Olomouc · currently on Erasmus+ at AUTH, Thessaloniki
+computer vision and geospatial engineer in the czech republic. mobile mapping, LiDAR, GeoAI. at CEDA Maps i turn street-level survey data (360° imagery, GNSS, LiDAR) into a map-ready inventory of traffic signs and road defects. i like the part where geospatial work stops being a notebook and starts being something that runs.
 
-I build computer vision and geospatial tools for mobile mapping. At [CEDA Maps](https://www.ceda.cz/) I work on a GeoAI pipeline that turns street-level survey data (360° imagery, GNSS, LiDAR) into a map-ready inventory of traffic signs and road defects. My part connects the two sides: YOLO detections, monocular depth and structure-from-motion on one, georeferencing and LiDAR validation on the other.
+MSc geoinformatics at Palacký University Olomouc, on Erasmus+ at AUTh Thessaloniki until february 2027. open to computer vision and geospatial roles across europe after that, remote or Olomouc-shaped. the [portfolio](https://petrmikeska.cz/) has case studies and a CV.
 
-Besides that I co-founded [VečerkaPlus](https://vecerkaplus.cz/), a late-night delivery service in Frýdek-Místek, where I wrote the whole platform and run day-to-day operations.
+## things i built because i wanted to
 
-🌐 [petrmikeska.cz](https://petrmikeska.cz/) · 💼 [LinkedIn](https://www.linkedin.com/in/mikeskapetr) · ✉️ piter.mikeska@gmail.com
+- [roundabout-exit-detection](https://github.com/MetrPikeska/roundabout-exit-detection) is YOLOv8 + ByteTrack over 5 minutes of aerial footage of an intersection in Kopřivnice. 11 ground control points from the ČÚZK orthophoto give a homography with 0.51 m mean reprojection error, so the tracks come out as GeoPackage and GeoTIFF you can drop straight into QGIS: 142 trajectories, speeds, exit counts, an O/D matrix.
+- [medpz-geoai](https://github.com/MetrPikeska/medpz-geoai) detects vehicles in four 10 cm/px orthophotos of Olomouc with YOLOv8-OBB and SAHI tiling, then joins them to 14,458 RÚIAN address points through Voronoi zones to get cars per resident, and clusters the leftovers with DBSCAN to find parking lots.
+- [park-accessibility-toolbox](https://github.com/MetrPikeska/park-accessibility-toolbox) is my bachelor's thesis as an ArcGIS Pro toolbox: network dataset, walking isochrones, population within reach of a park, following the European Commission's "A short walk to the park?" methodology.
+- [geote-klima-ui](https://github.com/MetrPikeska/geote-klima-ui) is a web front end over a PostGIS climate database, comparing the 1961–1990 and 1991–2020 normals against projections to 2050 for czech administrative units. [live](https://geote-klima-ui.vercel.app).
+- [pirati-volebni-atlas](https://github.com/MetrPikeska/pirati-volebni-atlas) maps GWR results of the 2025 parliamentary election down to municipality level, with demographics alongside and a draw-your-own-polygon tool for ad hoc aggregates. [live](https://pirati-volebni-atlas.vercel.app).
+- [vecerkaplus-analytics](https://github.com/MetrPikeska/vecerkaplus-analytics) is a Streamlit app on my own ubuntu box reading the production Supabase: margins, order timing, basket analysis. it decides what we buy next week.
+- [ski-cam-analytics](https://github.com/MetrPikeska/ski-cam-analytics) counts people in a ski resort HLS stream with YOLO ONNX on CPU. runs on START/STOP, not as a 24/7 daemon, because nobody needs a lift queue tracked in july.
+- [aw-watcher-git](https://github.com/MetrPikeska/aw-watcher-git) is an ActivityWatch watcher that logs which repo and branch i'm actually in, editor-agnostic, with its own timeline view.
 
-## Selected work
+a few smaller ones round it out: [cemetery-passport](https://github.com/MetrPikeska/cemetery-passport) (PostGIS and Leaflet grave editor), [dem-terrain-analyzer](https://github.com/MetrPikeska/dem-terrain-analyzer) (A* least-slope path across a DEM), [geo-places-quiz](https://github.com/MetrPikeska/geo-places-quiz), and ESP32 sensor projects that mostly exist so the flat has numbers on a dashboard.
 
-**[Vehicle detection from orthophotos](https://github.com/MetrPikeska/medpz-geoai)**
-YOLOv8s-OBB with SAHI tiling over four 10 cm/px orthophotos of Olomouc (EPSG:5514), combined with RÚIAN address points, Voronoi zones and DBSCAN to get vehicles per resident and to find parking lots.
+## the work i can't link
 
-**[Park Accessibility Toolbox](https://github.com/MetrPikeska/park-accessibility-toolbox)**
-Bachelor's thesis: QGIS and Python toolbox measuring pedestrian access to urban green space through network analysis. [Thesis page](https://geoinformatics.upol.cz/dprace/bakalarske/mikeska25)
+the CEDA Maps repos are private, so descriptors instead of code. the piece i'd show first: photogrammetric localization of traffic signs from a YOLO bbox and a GPS trajectory, around 400 commits since july 2026. position comes out as distance ⊕ bearing, the forward-facing camera is geometrically degenerate for depth, and off-axis observations are the only lever i could actually verify. LiDAR stays out of the estimate on purpose, it is the independent measuring stick. next to that: a clustering prototype that merges repeated road defect detections from several fleet vehicles into single road events, and the training set for a sign classifier (filtering, labeling, image quality scoring, duplicate removal across survey drives).
 
-**[GeoteKlima UI](https://github.com/MetrPikeska/geote-klima-ui)**
-Web interface over a PostGIS climate database: spatial queries and visualization of climate indices for the Czech Republic.
+[VečerkaPlus](https://vecerkaplus.cz/) is the other half. late-night drinks and snacks delivery in Frýdek-Místek that i co-founded in april 2025: shop, operator admin and courier app, delivery zones and pricing from spatial analysis, 1,059 commits since march 2026. i also do the purchasing and run the couriers, which is a different kind of debugging.
 
-**[Roundabout exit detection](https://github.com/MetrPikeska/roundabout-exit-detection)**
-YOLOv8 tracking with Shapely ROI polygons and a state machine that counts which exit each vehicle takes, aggregated per minute to CSV.
+my master's thesis compares cartographic output from ChatGPT, Claude, Gemini, Mistral and Copilot against ordinary GIS workflows. private until it is defended. before CEDA i did remote sensing at SkyMaps Geomatics: soil productivity maps, GDAL orthophoto automation, NDVI statistics for fertilizer field trials. since 2023 i also keep [olomouckymajales.cz](https://olomouckymajales.cz/) and [meetup.upol.cz](https://meetup.upol.cz/) alive through their traffic peaks.
 
-**[VečerkaPlus Analytics](https://github.com/MetrPikeska/vecerkaplus-analytics)**
-Streamlit app on my own Ubuntu server reading the production Supabase database: sales, margins, order timing and basket analysis that drive purchasing and pricing.
-
-**[Ski Cam Analytics](https://github.com/MetrPikeska/ski-cam-analytics)** · **[Cemetery Passport](https://github.com/MetrPikeska/cemetery-passport)** · **[DEM Terrain Analyzer](https://github.com/MetrPikeska/dem-terrain-analyzer)**
-People counting from an HLS stream (YOLO ONNX on CPU), a PostGIS and Leaflet editor for cemetery records, and A* least-slope routing over a DEM.
-
-## Stack
-
-| | |
-|---|---|
-| **Spatial** | PostGIS · QGIS · ArcGIS Pro · GDAL/OGR · GeoPandas · Leaflet · MapLibre |
-| **Vision & ML** | PyTorch · YOLOv8/OBB · SAHI · OpenCV · monocular depth · COLMAP |
-| **LiDAR & 3D** | PDAL · Open3D · CloudCompare · Blender |
-| **Code & data** | Python · TypeScript · SQL · FastAPI · PostgreSQL · Supabase · Streamlit |
-| **Infra** | Git · Docker · CUDA · Vercel · self-hosted Ubuntu |
-| **Hardware** | ESP32 · Arduino · C++ · sensors and home lab networking |
-
-## Now
-
-- Traffic sign geolocation and LiDAR-based accuracy checks at CEDA Maps
-- Master's thesis on AI-generated cartography: benchmarking LLM map output against GIS workflows
-- Erasmus+ semester at Aristotle University of Thessaloniki, Rural & Surveying Engineering
-- Open to computer vision and geospatial engineering roles across Europe
+Python, PyTorch, YOLO, OpenCV, COLMAP, GeoPandas, PostGIS, GDAL, PDAL, QGIS, FastAPI, TypeScript, Docker. reach me at piter.mikeska@gmail.com, on [LinkedIn](https://www.linkedin.com/in/mikeskapetr), or through the [portfolio](https://petrmikeska.cz/).
