@@ -1,4 +1,4 @@
-# petr mikeska
+# Petr Nikeska
 
 computer vision and geospatial engineer in the czech republic. mobile mapping, LiDAR, GeoAI. at CEDA Maps i turn street-level survey data (360° imagery, GNSS, LiDAR) into a map-ready inventory of traffic signs and road defects. i like the part where geospatial work stops being a notebook and starts being something that runs.
 
