@@ -11,11 +11,7 @@ MSc geoinformatics at Palacký University Olomouc, on Erasmus+ at AUTh Thessalon
 - [park-accessibility-toolbox](https://github.com/MetrPikeska/park-accessibility-toolbox) is my bachelor's thesis as an ArcGIS Pro toolbox: network dataset, walking isochrones, population within reach of a park, following the European Commission's "A short walk to the park?" methodology.
 - [geote-klima-ui](https://github.com/MetrPikeska/geote-klima-ui) is a web front end over a PostGIS climate database, comparing the 1961–1990 and 1991–2020 normals against projections to 2050 for czech administrative units. [live](https://geote-klima-ui.vercel.app).
 - [pirati-volebni-atlas](https://github.com/MetrPikeska/pirati-volebni-atlas) maps GWR results of the 2025 parliamentary election down to municipality level, with demographics alongside and a draw-your-own-polygon tool for ad hoc aggregates. [live](https://pirati-volebni-atlas.vercel.app).
-- [vecerkaplus-analytics](https://github.com/MetrPikeska/vecerkaplus-analytics) is a Streamlit app on my own ubuntu box reading the production Supabase: margins, order timing, basket analysis. it decides what we buy next week.
-- [ski-cam-analytics](https://github.com/MetrPikeska/ski-cam-analytics) counts people in a ski resort HLS stream with YOLO ONNX on CPU. runs on START/STOP, not as a 24/7 daemon, because nobody needs a lift queue tracked in july.
-- [aw-watcher-git](https://github.com/MetrPikeska/aw-watcher-git) is an ActivityWatch watcher that logs which repo and branch i'm actually in, editor-agnostic, with its own timeline view.
-
-a few smaller ones round it out: [cemetery-passport](https://github.com/MetrPikeska/cemetery-passport) (PostGIS and Leaflet grave editor), [dem-terrain-analyzer](https://github.com/MetrPikeska/dem-terrain-analyzer) (A* least-slope path across a DEM), [geo-places-quiz](https://github.com/MetrPikeska/geo-places-quiz), and ESP32 sensor projects that mostly exist so the flat has numbers on a dashboard.
+[geo-places-quiz](https://github.com/MetrPikeska/geo-places-quiz), and ESP32 sensor projects that mostly exist so the flat has numbers on a dashboard.
 
 ## the work i can't link
 
