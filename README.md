@@ -21,4 +21,4 @@ the CEDA Maps repos are private, so descriptors instead of code. the piece i'd s
 
 my master's thesis compares cartographic output from ChatGPT, Claude, Gemini, Mistral and Grok against ordinary GIS workflows. private until it is defended. before CEDA i did remote sensing at SkyMaps Geomatics: soil productivity maps, GDAL orthophoto automation, NDVI statistics for fertilizer field trials. since 2023 i also keep [olomouckymajales.cz](https://olomouckymajales.cz/) and [meetup.upol.cz](https://meetup.upol.cz/) alive through their traffic peaks.
 
-Python, PyTorch, YOLO, OpenCV, COLMAP, GeoPandas, PostGIS, GDAL, PDAL, QGIS, FastAPI, TypeScript, Docker. reach me at piter.mikeska@gmail.com, on [LinkedIn](https://www.linkedin.com/in/mikeskapetr), or through the [portfolio](https://petrmikeska.cz/).
+Python, PyTorch, YOLO, OpenCV, COLMAP, GeoPandas, PostGIS, GDAL, PDAL, QGIS, FastAPI, TypeScript, Docker. reach me at info@petrmikeska.cz, on [LinkedIn](https://www.linkedin.com/in/mikeskapetr), or through the [portfolio](https://petrmikeska.cz/).
